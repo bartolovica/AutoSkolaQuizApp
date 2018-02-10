@@ -1,5 +1,6 @@
 package hr.fesb.autoskola250.androidonlinequizapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -83,14 +84,17 @@ public class RankingFragment extends Fragment {
                 rankingTable.orderByChild("score")
         ) {
             @Override
-            protected void populateViewHolder(RankingViewHolder viewHolder, Ranking model, int position) {
+            protected void populateViewHolder(RankingViewHolder viewHolder, final Ranking model, int position) {
               viewHolder.txt_name.setText(model.getUserName());
               viewHolder.txt_score.setText(String.valueOf(model.getScore()));
 
               viewHolder.setItemClickListener(new ItemClickListener() {
                   @Override
                   public void OnClick(View view, int position, boolean isLongClick) {
-
+                      Intent scoreDetail = new Intent(getActivity(),ScoreDetail.class);
+                      scoreDetail.putExtra("viewUser",model.getUserName());
+                      //scoreDetail.putExtra("score", model.getScore());
+                      startActivity(scoreDetail);
                   }
               });
             }
