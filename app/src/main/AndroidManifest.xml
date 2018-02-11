@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hr.fesb.autoskola250.androidonlinequizapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -17,7 +20,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Home" />
-        <activity android:name=".Start"></activity>
+        <activity android:name=".Start" />
+        <activity android:name=".Playing" />
+        <activity android:name=".Done" />
+        <activity android:name=".ScoreDetail"></activity>
     </application>
 
 </manifest>

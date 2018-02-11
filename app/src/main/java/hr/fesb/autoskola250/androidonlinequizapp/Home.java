@@ -38,7 +38,7 @@ public class Home extends AppCompatActivity {
 
         });
         
-        setDefaultFragment();
+        setDefaultFragment();//=>postavljanje Category kao default fragmenta
 
     }
 

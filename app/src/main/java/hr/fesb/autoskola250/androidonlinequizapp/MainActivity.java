@@ -18,6 +18,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
+import hr.fesb.autoskola250.androidonlinequizapp.Common.Common;
 import hr.fesb.autoskola250.androidonlinequizapp.Model.User;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,10 +29,6 @@ public class MainActivity extends AppCompatActivity {
 
     FirebaseDatabase database;
     DatabaseReference users;
-
-
-
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +78,7 @@ public class MainActivity extends AppCompatActivity {
                         if(login.getPasword().equals(pwd)) {
 //                            Toast.makeText(MainActivity.this,"Login is ok",Toast.LENGTH_SHORT).show();
                             Intent homeActivity = new Intent(MainActivity.this, Home.class);
+                            Common.currentUser = login;
                             startActivity(homeActivity);
                             finish();
                         }

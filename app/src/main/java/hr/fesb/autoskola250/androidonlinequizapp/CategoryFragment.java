@@ -35,9 +35,6 @@ public class CategoryFragment extends Fragment {
     FirebaseDatabase database;
     DatabaseReference categories;
 
-
-
-
     public static CategoryFragment newInstance() {
         CategoryFragment categoryFragment = new CategoryFragment();
         return categoryFragment;
@@ -46,7 +43,6 @@ public class CategoryFragment extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         database = FirebaseDatabase.getInstance();
         categories = database.getReference("Category");
 
@@ -57,15 +53,12 @@ public class CategoryFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         myFragment = inflater.inflate(R.layout.fragment_category,container,false);
         listCategory = (RecyclerView)myFragment.findViewById(R.id.listCategory);
-        listCategory.setHasFixedSize(true);
+        //listCategory.setHasFixedSize(true);
         layoutManager = new LinearLayoutManager(container.getContext());
         listCategory.setLayoutManager(layoutManager);
-        
-        loadCategories();
-        
-        
-        return myFragment;
 
+        loadCategories();
+        return myFragment;
     }
 
     private void loadCategories()  {
@@ -87,7 +80,8 @@ public class CategoryFragment extends Fragment {
                     public void OnClick(View view, int position, boolean isLongClick) {
 //                       /* Toast.makeText(getActivity(),String.format("%s|%s",adapter.getRef(position).getKey(),model.getName()),Toast.LENGTH_SHORT).show();*/
                         Intent startGame = new Intent(getActivity(),Start.class);
-                        Common.categoryID = adapter.getRef(position).getKey();
+                        Common.CategoryId = adapter.getRef(position).getKey();
+                        Common.categoryName = model.getName();
                         startActivity(startGame);
 
                     }

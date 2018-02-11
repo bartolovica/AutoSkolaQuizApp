@@ -18,8 +18,8 @@ import hr.fesb.autoskola250.androidonlinequizapp.Common.Common;
 
 public class Playing extends AppCompatActivity implements View.OnClickListener {
 
-    final static long INTERVAL = 10000;
-    final static long TIMEOUT = 70000;//1sekunda
+    final static long INTERVAL = 3500;
+    final static long TIMEOUT = 20000;//1sekunda
 
     CountDownTimer mCountDown;
     int index = 0;
@@ -80,7 +80,7 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             if(clickedButton.getText().equals(rightAnswer))
             {
                 //ako izaberemo točan odgovor
-                score+=10;
+                score+=10;//bodovi-zato je 10
                 correctAnswer++;
                 showQuestion(++index); //sljedeće pitanje
             }

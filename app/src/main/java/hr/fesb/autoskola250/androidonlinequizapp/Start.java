@@ -19,60 +19,57 @@ import hr.fesb.autoskola250.androidonlinequizapp.Model.Question;
 
 public class Start extends AppCompatActivity {
 
-    Button btnPlay;
+  Button btnPlay;
 
-    FirebaseDatabase database;
-    DatabaseReference questions;
+  FirebaseDatabase database;
+  DatabaseReference questions;
 
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_start);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_start);
 
-        database = FirebaseDatabase.getInstance();
-        questions = database.getReference("Questions");
+    database = FirebaseDatabase.getInstance();
+    questions = database.getReference("Questions");
 
-        loadQuestion(Common.categoryID);
+    loadQuestion(Common.CategoryId);
 
-        btnPlay = (Button)findViewById(R.id.btnPlay);
+    btnPlay = (Button)findViewById(R.id.btnPlay);
 
-        btnPlay.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(Start.this,Playing.class);
-                startActivity(intent);
-                finish();
-            }
-        });
-    }
+    btnPlay.setOnClickListener(new View.OnClickListener() {
+      @Override
+      public void onClick(View v) {
+        Intent intent = new Intent(Start.this,Playing.class);
+        startActivity(intent);
+        finish();
+      }
+    });
+  }
 
-    private void loadQuestion(String categoryID) {
+  private void loadQuestion(String categoryID) {
 
-        //prvo, počistimo listu ako imamo starih pitanja
-        if(Common.questionList.size() > 0)
-            Common.questionList.clear();
+    //prvo, počistimo listu ako imamo starih pitanja
+    if(Common.questionList.size() > 0)
+      Common.questionList.clear();
 
-        questions.orderByChild("categoryID").equalTo(categoryID)
-                .addValueEventListener(new ValueEventListener() {
-                    @Override
-                    public void onDataChange(DataSnapshot dataSnapshot) {
-                        for(DataSnapshot postSnapshot : dataSnapshot.getChildren())
-                        {
-                            Question ques = postSnapshot.getValue(Question.class);
-                            Common.questionList.add(ques);
-                        }
+    questions.orderByChild("CategoryId").equalTo(categoryID)
+            .addValueEventListener(new ValueEventListener() {
+              @Override
+              public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot postSnapshot : dataSnapshot.getChildren())
+                {
+                  Question ques = postSnapshot.getValue(Question.class);
+                  Common.questionList.add(ques);
+                }
+              }
 
-                    }
+              @Override
+              public void onCancelled(DatabaseError databaseError) {
 
-                    @Override
-                    public void onCancelled(DatabaseError databaseError) {
+              }
+            });
 
-                    }
-                });
-
-        //Random lista ptanja
-        Collections.shuffle(Common.questionList);
-
-    }
+    //Collections.shuffle(Common.questionList);
+  }
 }
