@@ -15,6 +15,7 @@ import hr.fesb.autoskola250.androidonlinequizapp.Common.Common;
 import hr.fesb.autoskola250.androidonlinequizapp.Model.QuestionScore;
 
 public class Done extends AppCompatActivity {
+
     Button btnTryAgain;
     TextView txtResultScore;
     TextView getTxtResultQuestion;

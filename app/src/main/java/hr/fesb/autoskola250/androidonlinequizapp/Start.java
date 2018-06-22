@@ -69,7 +69,6 @@ public class Start extends AppCompatActivity {
 
               }
             });
-
     //Collections.shuffle(Common.questionList);
   }
 }

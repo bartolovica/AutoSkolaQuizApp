@@ -38,7 +38,6 @@ public class ScoreDetail extends AppCompatActivity {
 
         scoreList.setLayoutManager(layoutManager);
 
-
         if(getIntent() != null)
 
             viewUser = getIntent().getStringExtra("viewUser");

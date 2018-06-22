@@ -1,9 +1,5 @@
 package hr.fesb.autoskola250.androidonlinequizapp.Model;
 
-/**
- * Created by Antun on 22.1.2018..
- */
-
 public class Question {
     private String Question, AnswerA, AnswerB, AnswerC, AnswerD, CorrectAnswer, CategoryId, IsImageQuestion;
 

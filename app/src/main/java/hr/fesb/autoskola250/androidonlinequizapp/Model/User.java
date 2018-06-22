@@ -1,9 +1,5 @@
 package hr.fesb.autoskola250.androidonlinequizapp.Model;
 
-/**
- * Created by Antun on 18.1.2018..
- */
-
 public class User {
     private String userName;
     private String pasword;

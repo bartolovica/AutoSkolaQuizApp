@@ -91,6 +91,5 @@ public class CategoryFragment extends Fragment {
         adapter.notifyDataSetChanged();
         listCategory.setAdapter(adapter);
 
-
     }
 }

@@ -100,9 +100,6 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
 
         }
 
-
-
-
     }
 
     private void showQuestion(int index) {
@@ -167,7 +164,6 @@ public class Playing extends AppCompatActivity implements View.OnClickListener {
             public void onFinish() {
                 mCountDown.cancel();
                 showQuestion(++index);
-
             }
         };
         showQuestion(index);

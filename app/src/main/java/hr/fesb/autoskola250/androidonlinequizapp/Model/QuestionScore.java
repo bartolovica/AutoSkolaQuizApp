@@ -1,9 +1,5 @@
 package hr.fesb.autoskola250.androidonlinequizapp.Model;
 
-/**
- * Created by Antun on 22.1.2018..
- */
-
 public class QuestionScore {
     private String Question_Score;
     private String User;

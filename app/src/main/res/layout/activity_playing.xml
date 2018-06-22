@@ -14,8 +14,7 @@
         android:layout_marginTop="25dp"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        />
+        android:gravity="center" />
 
     <TextView
         android:id="@+id/question_text"
@@ -81,7 +80,7 @@
                 android:layout_marginLeft="8dp"
                 android:layout_marginRight="8dp"
                 android:indeterminate="false"
-                android:max="5" />
+                android:max="5"/>
 
             <Button
                 android:id="@+id/btnAnswerA"
@@ -93,7 +92,7 @@
                 android:background="#FF8a80"
                 android:layout_margin="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/btnAnswerB"
@@ -105,7 +104,7 @@
                 android:background="#FF8a80"
                 android:layout_margin="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/btnAnswerC"
@@ -117,7 +116,7 @@
                 android:background="#FF8a80"
                 android:layout_margin="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
             <Button
                 android:id="@+id/btnAnswerD"
@@ -129,10 +128,9 @@
                 android:background="#FF8a80"
                 android:layout_margin="8dp"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
-
 
     </RelativeLayout>
 

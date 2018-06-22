@@ -1,9 +1,5 @@
 package hr.fesb.autoskola250.androidonlinequizapp.Model;
 
-/**
- * Created by Antun on 27.1.2018..
- */
-
 public class Ranking {
     private String userName;
     private long score;

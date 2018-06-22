@@ -8,9 +8,6 @@ import android.widget.TextView;
 import hr.fesb.autoskola250.androidonlinequizapp.Interface.ItemClickListener;
 import hr.fesb.autoskola250.androidonlinequizapp.R;
 
-/**
- * Created by Antun on 20.1.2018..
- */
 
 public class CategoryViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 

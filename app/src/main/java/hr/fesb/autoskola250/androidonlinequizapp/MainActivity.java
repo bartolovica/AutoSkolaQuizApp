@@ -155,12 +155,10 @@ public class MainActivity extends AppCompatActivity {
                 });
                 dialogInterface.dismiss();
 
-
             }
 
         });
         alertDialog.show();
-
 
     }
 }

@@ -5,9 +5,7 @@ import android.view.View;
 import android.widget.TextView;
 import hr.fesb.autoskola250.androidonlinequizapp.R;
 
-/**
- * Created by Antun on 27.1.2018..
- */
+
 
 public class ScoreDetailViewHolder extends RecyclerView.ViewHolder {
 

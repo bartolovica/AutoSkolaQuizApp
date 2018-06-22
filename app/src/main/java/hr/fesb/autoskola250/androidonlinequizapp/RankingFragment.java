@@ -108,8 +108,6 @@ public class RankingFragment extends Fragment {
     }
 
 
-
-
     private void updateScore(final String userName, final RankingCallBack callBack) {
         questionScore.orderByChild("user").equalTo(userName)
                 .addListenerForSingleValueEvent(new ValueEventListener() {

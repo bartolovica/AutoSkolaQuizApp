@@ -1,9 +1,5 @@
 package hr.fesb.autoskola250.androidonlinequizapp.Model;
 
-/**
- * Created by Antun on 20.1.2018..
- */
-
 public class Category {
     private String Name;
     private String Image;

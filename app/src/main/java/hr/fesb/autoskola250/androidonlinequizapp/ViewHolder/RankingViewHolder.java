@@ -7,9 +7,6 @@ import android.widget.TextView;
 import hr.fesb.autoskola250.androidonlinequizapp.Interface.ItemClickListener;
 import hr.fesb.autoskola250.androidonlinequizapp.R;
 
-/**
- * Created by Antun on 27.1.2018..
- */
 
 public class RankingViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
